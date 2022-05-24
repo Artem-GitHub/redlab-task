@@ -1,7 +1,10 @@
 <template>
   <header class="header">
     <div class="container header__container">
-      <nuxt-link class="logo" to="/">
+      <nuxt-link
+        class="logo"
+        to="/"
+      >
         <HeaderLogo />
       </nuxt-link>
 
@@ -17,16 +20,32 @@
       </div>
 
       <nav class="navigation">
-        <nuxt-link class="navigation__link" to="/">
+        <nuxt-link
+          active-class="active"
+          class="navigation__link"
+          to="/after-repair"
+        >
           После ремонта
         </nuxt-link>
-        <nuxt-link class="navigation__link" to="/">
+        <nuxt-link
+          active-class="active"
+          class="navigation__link"
+          to="/general-cleaning"
+        >
           Генеральная уборка
         </nuxt-link>
-        <nuxt-link class="navigation__link" to="/">
+        <nuxt-link
+          active-class="active"
+          class="navigation__link"
+          to="/regular-cleaning"
+        >
           Регулярная уборка
         </nuxt-link>
-        <nuxt-link class="navigation__link" to="/">
+        <nuxt-link
+          active-class="active"
+          class="navigation__link"
+          to="/window-cleaning"
+        >
           Мойка окон
         </nuxt-link>
       </nav>
@@ -63,7 +82,7 @@ export default {
     height: 70px;
     background-color: transparent;
     padding: 0 36px 0 54px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     transition: background-color 0.4s ease-in-out;
 
@@ -123,6 +142,10 @@ export default {
       white-space: nowrap;
       color: $black;
       margin: 0 3px;
+
+      &.active {
+        font-weight: 700;
+      }
     }
   }
 
