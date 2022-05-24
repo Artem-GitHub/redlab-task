@@ -7,6 +7,7 @@
       ref="slideImage"
       class="slide__image"
       :src="cleaningType.imageSrc"
+      @load="calculateButtonPositions"
     >
 
     <transition :duration="{ leave: 1000 }">
@@ -50,7 +51,6 @@ export default {
   },
   mounted () {
     this.slideInfo = this.cleaningType.slideInfo.map(({ ...info }) => info)
-    this.calculateButtonPositions()
     window.addEventListener('resize', this.throttle)
   },
   beforeDestroy () {
