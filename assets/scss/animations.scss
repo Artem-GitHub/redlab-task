@@ -1,0 +1,126 @@
+//////      BENEFITS FADE      //////
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to, .fade-leave {
+  opacity: 1;
+}
+
+//////      BENEFITS INTERVAL ANIMATION      //////
+
+.before-interval-animation.benefit {
+  transform: translateY(50px);
+}
+
+.interval-animation.benefit {
+  animation: button-interval-animation 1.2s forwards;
+}
+
+@keyframes benefit-interval-animation {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//////      DESCRIPTION ANIMATION      //////
+
+.before-group-animation .description {
+  top: 100px;
+}
+
+.group-animation .description {
+  animation: description-animation 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes description-animation {
+  100% {
+    top: -100px;
+    visibility: hidden;
+  }
+}
+
+//////      SIDEBAR ANIMATION      //////
+
+.before-group-animation .sidebar {
+  transform: translateX(-100%);
+}
+
+.group-animation .sidebar {
+  animation: sidebar-animation 1s ease-in-out 0.8s forwards;
+}
+
+@keyframes sidebar-animation {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+//////      SLIDER ANIMATION      //////
+
+.before-group-animation .slider {
+  transform: translate(calc(calc(1 - 1065 / 1440) / calc(1065 / 1440) / 2 * -100%), 300px);
+}
+
+.slider-animation.slider {
+  transition: transform 1s ease-in-out;
+  transform: translate(calc(calc(1 - 1065 / 1440) / calc(1065 / 1440) / 2 * -100%), 250px);
+}
+
+.group-animation .slider {
+  animation: slider-animation 1s ease-in-out 0.6s forwards;
+}
+
+@keyframes slider-animation {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+//////      TITLE ANIMATION      //////
+
+.before-group-animation .sidebar__title {
+  transform: translate(-20px, -20px);
+}
+
+.group-animation .sidebar__title {
+  animation: title-animation 1s ease-in-out 1.2s forwards;
+}
+
+@keyframes title-animation {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+//////      BUTTONS INTERVAL ANIMATION      //////
+
+.before-interval-animation.sidebar__button {
+  transform: translateX(-100px);
+}
+
+.interval-animation.sidebar__button {
+  animation: button-interval-animation 1s ease-in-out 1.2s forwards;
+}
+
+@keyframes button-interval-animation {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+//////      ORDER BUTTON ANIMATION      //////
+
+@keyframes order-button-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
